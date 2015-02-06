@@ -60,6 +60,7 @@ class OpenIDConnect(object):
             client = server_env["OIC_CLIENT"][key]
         except KeyError:
             client = self.client_cls(client_authn_method=CLIENT_AUTHN_METHOD)
+            client.keyjar.verify_ssl = False
             client.redirect_uris = [callback]
             client.post_logout_redirect_uris = [logout_callback]
 

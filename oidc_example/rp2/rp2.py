@@ -261,9 +261,8 @@ if __name__ == '__main__':
                                                           session_opts))
 
     if conf.BASE.startswith("https"):
-        from cherrypy.wsgiserver import ssl_pyopenssl
-
-        SRV.ssl_adapter = ssl_pyopenssl.pyOpenSSLAdapter(
+        from cherrypy.wsgiserver import ssl_builtin
+        SRV.ssl_adapter = ssl_builtin.BuiltinSSLAdapter(
             conf.SERVER_CERT, conf.SERVER_KEY, conf.CA_BUNDLE)
 
     LOGGER.info("RP server starting listening on port:%s" % conf.PORT)
