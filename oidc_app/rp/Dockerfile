@@ -1,4 +1,4 @@
-FROM openid
+FROM legogris/openid
 
 RUN ln -s /pyoidc/oidc_examples/rp2 /srv/rp
 COPY ./config.py /srv/op/

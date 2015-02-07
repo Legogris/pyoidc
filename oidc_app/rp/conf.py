@@ -1,4 +1,4 @@
-PORT = 8666
+PORT = 13337
 #BASE = "http://lingon.catalogix.se:" + str(PORT) + "/"
 #BASE = "http://hashog.umdc.umu.se:" + str(PORT) + "/"
 BASE = "https://rp.legogris.se:" + str(PORT) + "/"
