@@ -375,7 +375,7 @@ if __name__ == '__main__':
     import importlib
 
     from cherrypy import wsgiserver
-    from cherrypy.wsgiserver import ssl_pyopenssl
+    from cherrypy.wsgiserver import ssl_builtin
 
     from oic.utils.sdb import SessionDB
 
@@ -599,7 +599,7 @@ if __name__ == '__main__':
     https = ""
     if config.SERVICE_URL.startswith("https"):
         https = "using HTTPS"
-        SRV.ssl_adapter = ssl_pyopenssl.pyOpenSSLAdapter(
+        SRV.ssl_adapter = ssl_builtin.BuiltinSSLAdapter(
             config.SERVER_CERT, config.SERVER_KEY, config.CERT_CHAIN)
 
     LOGGER.info("OC server starting listening on port:%s %s" % (args.port,

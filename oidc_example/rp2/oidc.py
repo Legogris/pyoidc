@@ -58,6 +58,7 @@ class OpenIDConnect(object):
     def dynamic(self, server_env, callback, logout_callback, session, key):
         try:
             client = server_env["OIC_CLIENT"][key]
+            client.keyjar.verify_ssl = False
         except KeyError:
             client = self.client_cls(client_authn_method=CLIENT_AUTHN_METHOD)
             client.keyjar.verify_ssl = False
