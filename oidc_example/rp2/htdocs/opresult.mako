@@ -29,50 +29,50 @@
       """
       element = ""
       if result[0]:
-        element += "<p>You have successfully loged in!</p>"
-        element += "<div class='row'>"
-        element += "<div class='col-md-10'>Accesstoken</div>"
-        element += "</div>"
-        element += "<div class='row'>"
-        element += "<div class='col-md-10'>" + str(result[2]) + "</div>"
-        element += "</div>"
+        element += "<div class='panel-body'><p>You have successfully logged in!</p></div>"
+        element += "<table class='table'>"
+        element += "<tr>"
+        element += "<td>Access token</td>"
+        element += "<td>" + str(result[2]) + "</td>"
+        element += "</tr>"
         try:
             text = str(result[3].authorization_endpoint)
-            element += "<div class='row'>"
-            element += "<div class='col-md-3'>Authorization endpoint</div>"
-            element += "<div class='col-md-7'>" + text + "</div>"
-            element += "</div>"
+            element += "<tr>"
+            element += "<td>Authorization endpoint</td>"
+            element += "<td>" + text + "</td>"
+            element += "</tr>"
         except:
             pass
         try:
             text = str(result[3].registration_endpoint)
-            element += "<div class='row'>"
-            element += "<div class='col-md-3'>Registration endpoint</div>"
-            element += "<div class='col-md-7'>" + text + "</div>"
-            element += "</div>"
+            element += "<tr>"
+            element += "<td>Registration endpoint</td>"
+            element += "<td>" + text + "</td>"
+            element += "</tr>"
         except:
             pass
         try:
             text = str(result[3].token_endpoint)
-            element += "<div class='row'>"
-            element += "<div class='col-md-3'>Token endpoint</div>"
-            element += "<div class='col-md-7'>" + text + "</div>"
-            element += "</div>"
+            element += "<tr>"
+            element += "<td>Token endpoint</td>"
+            element += "<td>" + text + "</td>"
+            element += "</tr>"
         except:
             pass
         try:
             text = str(result[3].userinfo_endpoint)
-            element += "<div class='row'>"
-            element += "<div class='col-md-3'>User info endpoint</div>"
-            element += "<div class='col-md-7'>" + text + "</div>"
-            element += "</div>"
+            element += "<tr>"
+            element += "<td>UserInfo endpoint</td>"
+            element += "<td>" + text + "</td>"
+            element += "</tr>"
         except:
             pass
         for key, value in result[1].items():
-            element += "<div class='row'>"
-            element += "<div class='col-md-3'>" +  escape(unicode(key).encode("utf-8")) + "</div>"
-            element += "<div class='col-md-7'>" + escape(unicode(value).encode("utf-8")) + "</div>"
-            element += "</div>"
+            element += "<tr>"
+            element += "<td>" +  escape(unicode(key).encode("utf-8")) + "</td>"
+            element += "<td>" + escape(unicode(value).encode("utf-8")) + "</td>"
+            element += "</tr>"
+        element += '</table>'
       else:
         element += "<p>You have failed to connect to the designated OP with the message:</p><p> " + result[1] + "</p>"
       return element
@@ -115,9 +115,9 @@
 
     <div class="container">
      <!-- Main component for a primary marketing message or call to action -->
-      <div class="jumbotron">
-        <h1>OP result</h1>
-        ${createResult(result)}
+      <div class="panel panel-default">
+        <div class="panel-heading">OP result</div>
+          ${createResult(result)}
       </div>
 
     </div> <!-- /container -->
