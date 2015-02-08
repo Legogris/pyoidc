@@ -1,3 +1,3 @@
 #!/bin/bash
-docker run -it -P --name op --add-host="rp.legogris.se:127.0.01" legogris/openid_op
-docker run -it -P --name rp --add-host="idp.legogris.se:127.0.01" --net container:op legogris/openid_rp
+docker run -itd -P --name openid_op --add-host="rp.legogris.se:127.0.0.1" legogris/openid_op
+docker run -itd -P --name openid_rp --add-host="idp.legogris.se:127.0.0.1" --net container:openid_op legogris/openid_rp
