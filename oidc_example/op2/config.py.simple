@@ -33,20 +33,20 @@ CERT_CHAIN = None
 USERINFO = "SIMPLE"
 
 USERDB = {
-    "diana": {
-        "sub": "dikr0001",
-        "name": "Diana Krall",
-        "given_name": "Diana",
-        "family_name": "Krall",
-        "nickname": "Dina",
-        "email": "diana@example.org",
-        "email_verified": False,
-        "phone_number": "+46 90 7865000",
+    "legogris": {
+        "sub": "lego0001",
+        "name": "Robert Edstrom",
+        "given_name": "Robert",
+        "family_name": "Edstrom",
+        "nickname": "Legogris",
+        "email": "legogris@legogris.se",
+        "email_verified": True,
+        "phone_number": "+81 80 775 93660",
         "address": {
-            "street_address": "Umeå Universitet",
-            "locality": "Umeå",
-            "postal_code": "SE-90187",
-            "country": "Sweden"
+            "street_address": "xyz123",
+            "locality": "xyz123",
+            "postal_code": "JP-1234",
+            "country": "Japan"
         },
     },
     "babs": {
