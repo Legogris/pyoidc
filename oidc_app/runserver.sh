@@ -4,6 +4,7 @@ docker run -itd -P --name openid_rp --net container:openid_op legogris/openid_rp
 echo -e "`docker inspect openid_op | grep IPAddress | grep -oEi [0-9.]*`\tidp.legogris.se rp.legogris.se"
 echo "Open https://rp.legogris.se:13337/"
 echo "https://idp.legogris.se:13338/test"
+echo "To run capure: tcpdump -i any -nnvvXSs 0 -w [FILE]"
 docker run -it  --rm -P --name openid_capturer --net container:openid_op legogris/openid_capturer bash
 docker stop openid_op
 docker stop openid_rp

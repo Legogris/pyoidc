@@ -33,7 +33,7 @@ CERT_CHAIN = None
 USERINFO = "SIMPLE"
 
 USERDB = {
-    "diana": {
+    "legogris": {
         "sub": "robeds0001",
         "name": "Robert Edstrom",
         "given_name": "Robert",
