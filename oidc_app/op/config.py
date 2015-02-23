@@ -34,19 +34,19 @@ USERINFO = "SIMPLE"
 
 USERDB = {
     "diana": {
-        "sub": "dikr0001",
-        "name": "Diana Krall",
-        "given_name": "Diana",
-        "family_name": "Krall",
-        "nickname": "Dina",
-        "email": "diana@example.org",
-        "email_verified": False,
-        "phone_number": "+46 90 7865000",
+        "sub": "robeds0001",
+        "name": "Robert Edstrom",
+        "given_name": "Robert",
+        "family_name": "Edstrom",
+        "nickname": "legogris",
+        "email": "legogris@legogris.se",
+        "email_verified": True,
+        "phone_number": "+48180736690",
         "address": {
-            "street_address": "Umeå Universitet",
-            "locality": "Umeå",
-            "postal_code": "SE-90187",
-            "country": "Sweden"
+            "street_address": "Komaba 4-5-29",
+            "locality": "Tokyo",
+            "postal_code": "JP-90187",
+            "country": "JP"
         },
     },
     "babs": {

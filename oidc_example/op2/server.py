@@ -59,7 +59,7 @@ NAME = "pyoic"
 OAS = None
 
 PASSWD = {
-    "diana": "krall",
+    "legogris": "secret",
     "babs": "howes",
     "upper": "crust"
 }
